@@ -44,7 +44,7 @@ android {
     buildTypes {
         release {
             // TODO: 为发布版本添加您自己的签名配置.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // 现在使用调试密钥签名, 所以 `flutter run --release` 有效.
             signingConfig signingConfigs.debug
         }
     }
