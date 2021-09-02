@@ -3,12 +3,16 @@ import 'package:google_flutter_demo/util.dart';
 
 import 'examples/animated_container_example.dart';
 import 'examples/expanded_example.dart';
+import 'examples/fade_in_image_example.dart';
 import 'examples/fade_transition_example.dart';
 import 'examples/floating_action_button_example.dart';
 import 'examples/future_builder_example.dart';
+import 'examples/inherited_model/inherited_model_example.dart';
 import 'examples/opacity_example.dart';
 import 'examples/page_view_example.dart';
 import 'examples/safearea_example.dart';
+import 'examples/sliver_app_bar_example.dart';
+import 'examples/stream_builder_example.dart';
 import 'examples/table_example.dart';
 import 'examples/wrap_example.dart';
 
@@ -39,7 +43,15 @@ class HomePage extends StatelessWidget {
           _buildListItem(context, "FloatingActionButton", '''Scaffold 的浮动按钮''',
               const FloatingActionButtonExample()),
           _buildListItem(context, "PageView", '''页面切换动画''', PageViewExample()),
-          _buildListItem(context, "Table", '''b表格''', TableExample()),
+          _buildListItem(context, "Table", '''表格''', const TableExample()),
+          _buildListItem(
+              context,
+              "SliverAppBar",
+              '''SliverAppBar & SliverList & SliverGrid''',
+              const SliverAppBarExample()),
+          _buildListItem(context, "FadeInImage", '''图片延时加载''', const FadeInImageExample()),
+          _buildListItem(context, "StreamBuilder", '''基于与 [S​​tream] 交互的最新快照构建自身的小部件。''', const StreamBuilderExample()),
+          _buildListItem(context, "InheritedModel", '''''', const InheritedModelExample()),
         ],
       ),
     );
