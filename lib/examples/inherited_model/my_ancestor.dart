@@ -16,7 +16,7 @@ class MyAncestor extends InheritedModel<String>{
 
   @override
   bool updateShouldNotifyDependent(MyAncestor oldWidget, Set<dynamic> dependencies) {
-    // TODO: implement updateShouldNotifyDependent
+    // implement updateShouldNotifyDependent
 //    throw UnimplementedError();
   if(dependencies.contains("one") && colorOne != oldWidget.colorOne){
     return true;

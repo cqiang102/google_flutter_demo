@@ -1,34 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:google_flutter_demo/util.dart';
 
-import 'animated_builder_example.dart';
+import 'examples/alert_dialog_example.dart';
+import 'examples/animated_opacity_example.dart';
+import 'examples/animated_positioned_example.dart';
+import 'examples/animated_switcher_example.dart';
+import 'examples/animated_builder_example.dart';
 import 'examples/absorb_pointer_example.dart';
 import 'examples/align_example.dart';
 import 'examples/animated_container_example.dart';
+import 'examples/animated_icon_example.dart';
+import 'examples/animated_list_example.dart';
+import 'examples/animated_padding_example.dart';
+import 'examples/aspect_ratio_example.dart';
 import 'examples/clip_r_rect_example.dart';
+import 'examples/constrained_box_example.dart';
+import 'examples/container_example.dart';
 import 'examples/custom_paint_example.dart';
+import 'examples/data_table_example.dart';
+import 'examples/dismissible_example.dart';
+import 'examples/draggable_example.dart';
 import 'examples/expanded_example.dart';
 import 'examples/fade_in_image_example.dart';
 import 'examples/fade_transition_example.dart';
 import 'examples/fitted_box_example.dart';
+import 'examples/flexible_example.dart';
 import 'examples/floating_action_button_example.dart';
+import 'examples/fractionally_sized_box_example.dart';
 import 'examples/future_builder_example.dart';
 import 'examples/hero_example/hero_example.dart';
 import 'examples/image_filter_example.dart';
+import 'examples/indexed_stack_example.dart';
 import 'examples/inherited_model/inherited_model_example.dart';
+import 'examples/inherited_widget/inherited_widget_example.dart';
 import 'examples/layout_builder_example.dart';
+import 'examples/limited_box_example.dart';
+import 'examples/list_tile_example.dart';
+import 'examples/list_view_example.dart';
+import 'examples/media_query_example.dart';
 import 'examples/opacity_example.dart';
 import 'examples/page_view_example.dart';
+import 'examples/placeholder_example.dart';
 import 'examples/positioned_example.dart';
+import 'examples/reorderable_list_view_example.dart';
+import 'examples/rich_text_example.dart';
 import 'examples/safearea_example.dart';
+import 'examples/selectable_text_example.dart';
+import 'examples/semantics_example.dart';
+import 'examples/sized_box_example.dart';
+import 'examples/slider_example.dart';
 import 'examples/sliver_app_bar_example.dart';
+import 'examples/spacer_example.dart';
+import 'examples/stack_example.dart';
 import 'examples/stream_builder_example.dart';
 import 'examples/table_example.dart';
 import 'examples/tooltip_example.dart';
 import 'examples/transform_example.dart';
+import 'examples/value_listenable_builder/value_listenable_builder_example.dart';
 import 'examples/wrap_example.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}):super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +107,39 @@ class HomePage extends StatelessWidget {
           _buildListItem(context, "ImageFilter", '''模糊效果''', const ImageFilterExample()),
           _buildListItem(context, "Align", '''组件相对位置''', const AlignExample()),
           _buildListItem(context, "Positioned", '''绝对定位''', const PositionedExample()),
-          _buildListItem(context, "AnimatedBuilder", '''绝对定位''', const AnimatedBuilderExample()),
+          _buildListItem(context, "AnimatedBuilder", '''构建动画''', const AnimatedBuilderExample()),
+          _buildListItem(context, "Dismissible", '''可以滑动的组件''', const DismissibleExample()),
+          _buildListItem(context, "SizedBox", '''一个有特定大小的组件，让子组件也跟随其大小''', const SizedBoxExample()),
+          _buildListItem(context, "ValueListenableBuilder", '''数据监听变化''', const ValueListenableBuilderExample()),
+          _buildListItem(context, "Draggable", '''可以拖动的组件''', const DraggableExample()),
+          _buildListItem(context, "AnimatedList", '''带动画的list''', AnimatedListExample()),
+          _buildListItem(context, "Flexible", '''相对父容器的弹性布局''',const FlexibleExample()),
+          _buildListItem(context, "MediaQuery", '''媒体查询''',const MediaQueryExample()),
+          _buildListItem(context, "Spacer", '''占位''',const SpacerExample()),
+          _buildListItem(context, "InheritedWidget", '''数据共享，状态管理''',const InheritedWidgetExample()),
+          _buildListItem(context, "AnimatedIcon", '''动画图标''',const AnimatedIconExample()),
+          _buildListItem(context, "AspectRatio", '''固定款高比例''',const AspectRatioExample()),
+          _buildListItem(context, "LimitedBox", '''创建一个仅在不受约束时限制其大小的框''',const LimitedBoxExample()),
+          _buildListItem(context, "Placeholder", '''加载组件前，占位''',const PlaceholderExample()),
+          _buildListItem(context, "RichText", '''文字中特殊效果''',const RichTextExample()),
+          _buildListItem(context, "ReorderableListView", '''可以拖动 Item 的列表组件''',const ReorderableListViewExample()),
+          _buildListItem(context, "AnimatedSwitcher", '''组件切换动画''',const AnimatedSwitcherExample()),
+          _buildListItem(context, "AnimatedPositioned", '''组件移动位置动画''',const AnimatedPositionedExample()),
+          _buildListItem(context, "AnimatedPadding", '''组件修改内边距动画''',const AnimatedPaddingExample()),
+          _buildListItem(context, "IndexedStack", '''可切换层数的层叠布局''',const IndexedStackExample()),
+          _buildListItem(context, "Semantics", '''组件语意''',const SemanticsExample()),
+          _buildListItem(context, "ConstrainedBox", '''组件大小约束''',const ConstrainedBoxExample()),
+          _buildListItem(context, "Stack", '''层叠布局''',const StackExample()),
+          _buildListItem(context, "AnimatedOpacity", '''改变组件透明度的动画''',const AnimatedOpacityExample()),
+          _buildListItem(context, "FractionallySizedBox", '''使用百分比尺寸的组件''',const FractionallySizedBoxExample()),
+          _buildListItem(context, "ListView", '''列表组件''',const ListViewExample()),
+          _buildListItem(context, "ListTile", '''列表中规范的组件''',const ListTileExample()),
+          _buildListItem(context, "Container", '''容器组件''',const ContainerExample()),
+          _buildListItem(context, "SelectableText", '''可选择复制的文字''',const SelectableTextExample()),
+          _buildListItem(context, "DataTable", '''数据表格''',const DataTableExample()),
+          _buildListItem(context, "Slider", '''类似音量选择的拖动条''',const SliderExample()),
+          _buildListItem(context, "AlertDialog", '''弹窗''',const AlertDialogExample()),
+          _buildListItem(context, "AnimatedCrossFade", '''交叉淡入淡出''',const AnimatedCrossFadeExample()),
         ],
       ),
     );

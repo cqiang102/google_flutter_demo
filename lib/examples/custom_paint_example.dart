@@ -24,7 +24,7 @@ class CustomPaintExample extends StatelessWidget {
 class MyPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
+    // implement paint
     canvas.drawLine(const Offset(0.0, 0.0), Offset(size.width, size.height), Paint());
   }
 
