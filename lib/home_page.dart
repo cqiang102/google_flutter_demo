@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_flutter_demo/util.dart';
 
 import 'examples/alert_dialog_example.dart';
+import 'examples/animated_cross_fade_example.dart';
 import 'examples/animated_opacity_example.dart';
 import 'examples/animated_positioned_example.dart';
 import 'examples/animated_switcher_example.dart';
@@ -14,12 +15,14 @@ import 'examples/animated_list_example.dart';
 import 'examples/animated_padding_example.dart';
 import 'examples/aspect_ratio_example.dart';
 import 'examples/clip_r_rect_example.dart';
+import 'examples/color_filtered_example.dart';
 import 'examples/constrained_box_example.dart';
 import 'examples/container_example.dart';
 import 'examples/custom_paint_example.dart';
 import 'examples/data_table_example.dart';
 import 'examples/dismissible_example.dart';
 import 'examples/draggable_example.dart';
+import 'examples/draggable_scrollable_sheet_example.dart';
 import 'examples/expanded_example.dart';
 import 'examples/fade_in_image_example.dart';
 import 'examples/fade_transition_example.dart';
@@ -58,6 +61,7 @@ import 'examples/tooltip_example.dart';
 import 'examples/transform_example.dart';
 import 'examples/value_listenable_builder/value_listenable_builder_example.dart';
 import 'examples/wrap_example.dart';
+import 'toggle_buttons_example.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}):super(key: key);
@@ -139,7 +143,10 @@ class HomePage extends StatelessWidget {
           _buildListItem(context, "DataTable", '''数据表格''',const DataTableExample()),
           _buildListItem(context, "Slider", '''类似音量选择的拖动条''',const SliderExample()),
           _buildListItem(context, "AlertDialog", '''弹窗''',const AlertDialogExample()),
-          _buildListItem(context, "AnimatedCrossFade", '''交叉淡入淡出''',const AnimatedCrossFadeExample()),
+          _buildListItem(context, "AnimatedCrossFade", '''组件交叉淡入淡出动画''',const AnimatedCrossFadeExample()),
+          _buildListItem(context, "DraggableScrollableSheet", '''可上拉的底部滚动页面组件''',const DraggableScrollableSheetExample()),
+          _buildListItem(context, "ColorFiltered", '''颜色蒙版''',const ColorFilteredExample()),
+          _buildListItem(context, "ToggleButtons", '''颜色蒙版''', const ToggleButtonsExample()),
         ],
       ),
     );
