@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_flutter_demo/util.dart';
 
+import 'examples/about_dialog_example.dart';
 import 'examples/alert_dialog_example.dart';
 import 'examples/animated_cross_fade_example.dart';
 import 'examples/animated_opacity_example.dart';
@@ -13,16 +14,27 @@ import 'examples/animated_container_example.dart';
 import 'examples/animated_icon_example.dart';
 import 'examples/animated_list_example.dart';
 import 'examples/animated_padding_example.dart';
+import 'examples/animated_widget_example.dart';
 import 'examples/aspect_ratio_example.dart';
+import 'examples/builder_example.dart';
+import 'examples/checkbox_list_tile_example.dart';
+import 'examples/circular_progress_indicator_and_linear_progress_indicator_example.dart';
+import 'examples/clip_oval_example.dart';
+import 'examples/clip_path_example.dart';
 import 'examples/clip_r_rect_example.dart';
 import 'examples/color_filtered_example.dart';
 import 'examples/constrained_box_example.dart';
 import 'examples/container_example.dart';
+import 'examples/cupertino_action_sheet_example.dart';
+import 'examples/cupertino_activity_indicator_example.dart';
 import 'examples/custom_paint_example.dart';
 import 'examples/data_table_example.dart';
+import 'examples/default_tab_controller_and_tab_bar_example.dart';
 import 'examples/dismissible_example.dart';
+import 'examples/divider_example.dart';
 import 'examples/draggable_example.dart';
 import 'examples/draggable_scrollable_sheet_example.dart';
+import 'examples/drawer_example.dart';
 import 'examples/expanded_example.dart';
 import 'examples/fade_in_image_example.dart';
 import 'examples/fade_transition_example.dart';
@@ -32,6 +44,8 @@ import 'examples/floating_action_button_example.dart';
 import 'examples/fractionally_sized_box_example.dart';
 import 'examples/future_builder_example.dart';
 import 'examples/hero_example/hero_example.dart';
+import 'examples/ignore_pointer_example.dart';
+import 'examples/image_example.dart';
 import 'examples/image_filter_example.dart';
 import 'examples/indexed_stack_example.dart';
 import 'examples/inherited_model/inherited_model_example.dart';
@@ -40,8 +54,12 @@ import 'examples/layout_builder_example.dart';
 import 'examples/limited_box_example.dart';
 import 'examples/list_tile_example.dart';
 import 'examples/list_view_example.dart';
+import 'examples/list_wheel_scroll_view_example.dart';
 import 'examples/media_query_example.dart';
+import 'examples/notification_listener_example.dart';
 import 'examples/opacity_example.dart';
+import 'examples/package_async_example.dart';
+import 'examples/padding_example.dart';
 import 'examples/page_view_example.dart';
 import 'examples/placeholder_example.dart';
 import 'examples/positioned_example.dart';
@@ -50,18 +68,21 @@ import 'examples/rich_text_example.dart';
 import 'examples/safearea_example.dart';
 import 'examples/selectable_text_example.dart';
 import 'examples/semantics_example.dart';
+import 'examples/shader_mask_example.dart';
 import 'examples/sized_box_example.dart';
 import 'examples/slider_example.dart';
 import 'examples/sliver_app_bar_example.dart';
+import 'examples/snack_bar_example.dart';
 import 'examples/spacer_example.dart';
 import 'examples/stack_example.dart';
 import 'examples/stream_builder_example.dart';
 import 'examples/table_example.dart';
 import 'examples/tooltip_example.dart';
 import 'examples/transform_example.dart';
+import 'examples/tween_animation_builder_example.dart';
 import 'examples/value_listenable_builder/value_listenable_builder_example.dart';
 import 'examples/wrap_example.dart';
-import 'toggle_buttons_example.dart';
+import 'examples/toggle_buttons_example.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}):super(key: key);
@@ -146,7 +167,28 @@ class HomePage extends StatelessWidget {
           _buildListItem(context, "AnimatedCrossFade", '''组件交叉淡入淡出动画''',const AnimatedCrossFadeExample()),
           _buildListItem(context, "DraggableScrollableSheet", '''可上拉的底部滚动页面组件''',const DraggableScrollableSheetExample()),
           _buildListItem(context, "ColorFiltered", '''颜色蒙版''',const ColorFilteredExample()),
-          _buildListItem(context, "ToggleButtons", '''颜色蒙版''', const ToggleButtonsExample()),
+          _buildListItem(context, "ToggleButtons", '''开关按钮组''', const ToggleButtonsExample()),
+          _buildListItem(context, "CupertinoActionSheet", '''Ios 风格底部弹出框''', const CupertinoActionSheetExample()),
+          _buildListItem(context, "TweenAnimationBuilder", '''构建简单动画''', const TweenAnimationBuilderExample()),
+          _buildListItem(context, "Image", '''展示图片''', const ImageExample()),
+          _buildListItem(context, "DefaultTabController & TabBar", '''DefaultTabController & TabBar & TabBarView''', const DefaultTabControllerAndTabBarExample()),
+          _buildListItem(context, "Drawer", '''侧边抽屉''', const DrawerExample()),
+          _buildListItem(context, "SnackBar", '''提示消息''', const SnackBarExample()),
+          _buildListItem(context, "ListWheelScrollView", '''环形滚动ListView''', const ListWheelScrollViewExample()),
+          _buildListItem(context, "ShaderMask", '''组件着色器''', const ShaderMaskExample()),
+          _buildListItem(context, "NotificationListener", '''组件向上传递通知''', const NotificationListenerExample()),
+          _buildListItem(context, "Builder", '''构建一个新的 context ,在父组件还没构建时访问父组件''', const BuilderExample()),
+          _buildListItem(context, "ClipPath", '''自定义形状''', const ClipPathExample()),
+          _buildListItem(context, "CircularProgressIndicator & LinearProgressIndicator", '''加载中动画''', const CircularProgressIndicatorAndLinearProgressIndicatorExample()),
+          _buildListItem(context, "Divider", '''分割线''', const DividerExample()),
+          _buildListItem(context, "IgnorePointer", '''忽略交互''', const IgnorePointerExample()),
+          _buildListItem(context, "CupertinoActivityIndicator", '''Ios 加载中的动画''', const CupertinoActivityIndicatorExample()),
+          _buildListItem(context, "ClipOval", '''裁剪成圆形''', const ClipOvalExample()),
+          _buildListItem(context, "AnimatedWidget", '''自定义动画''', const AnimatedWidgetExample()),
+          _buildListItem(context, "Padding", '''设置内边距''', const PaddingExample()),
+          _buildListItem(context, "CheckboxListTile", '''带选择框的 ListTitle''', const CheckboxListTileExample()),
+          _buildListItem(context, "AboutDialog", '''关于 App 法律协议''', const AboutDialogExample()),
+          _buildListItem(context, "Package:async", '''dart 异步包''', const PackageAsyncExample()),
         ],
       ),
     );
