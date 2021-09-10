@@ -14,6 +14,7 @@ import 'examples/animated_container_example.dart';
 import 'examples/animated_icon_example.dart';
 import 'examples/animated_list_example.dart';
 import 'examples/animated_padding_example.dart';
+import 'examples/animated_text_kit_example.dart';
 import 'examples/animated_widget_example.dart';
 import 'examples/aspect_ratio_example.dart';
 import 'examples/builder_example.dart';
@@ -30,44 +31,61 @@ import 'examples/cupertino_activity_indicator_example.dart';
 import 'examples/custom_paint_example.dart';
 import 'examples/data_table_example.dart';
 import 'examples/default_tab_controller_and_tab_bar_example.dart';
+import 'examples/device_info_example.dart';
 import 'examples/dismissible_example.dart';
 import 'examples/divider_example.dart';
 import 'examples/draggable_example.dart';
 import 'examples/draggable_scrollable_sheet_example.dart';
 import 'examples/drawer_example.dart';
 import 'examples/expanded_example.dart';
+import 'examples/expansion_panel_example.dart';
 import 'examples/fade_in_image_example.dart';
 import 'examples/fade_transition_example.dart';
 import 'examples/fitted_box_example.dart';
 import 'examples/flexible_example.dart';
 import 'examples/floating_action_button_example.dart';
+import 'examples/flutter_logo_example.dart';
+import 'examples/flutter_slidable_example.dart';
 import 'examples/fractionally_sized_box_example.dart';
 import 'examples/future_builder_example.dart';
+import 'examples/grid_view_example.dart';
 import 'examples/hero_example/hero_example.dart';
 import 'examples/ignore_pointer_example.dart';
 import 'examples/image_example.dart';
 import 'examples/image_filter_example.dart';
+import 'examples/image_filtered_example.dart';
 import 'examples/indexed_stack_example.dart';
 import 'examples/inherited_model/inherited_model_example.dart';
 import 'examples/inherited_widget/inherited_widget_example.dart';
+import 'examples/interactive_viewer_example.dart';
 import 'examples/layout_builder_example.dart';
 import 'examples/limited_box_example.dart';
 import 'examples/list_tile_example.dart';
 import 'examples/list_view_example.dart';
 import 'examples/list_wheel_scroll_view_example.dart';
+import 'examples/location_example.dart';
 import 'examples/media_query_example.dart';
+import 'examples/mouse_region_example.dart';
 import 'examples/notification_listener_example.dart';
 import 'examples/opacity_example.dart';
+import 'examples/package_animations_example.dart';
 import 'examples/package_async_example.dart';
+import 'examples/package_collection_example.dart';
+import 'examples/package_connectivity_example.dart';
+import 'examples/package_sqflite_example.dart';
 import 'examples/padding_example.dart';
 import 'examples/page_view_example.dart';
+import 'examples/physical_model_example.dart';
 import 'examples/placeholder_example.dart';
 import 'examples/positioned_example.dart';
 import 'examples/reorderable_list_view_example.dart';
 import 'examples/rich_text_example.dart';
+import 'examples/rotated_box_example.dart';
 import 'examples/safearea_example.dart';
+import 'examples/scrollbar_example.dart';
 import 'examples/selectable_text_example.dart';
 import 'examples/semantics_example.dart';
+import 'examples/sensors_plus_example.dart';
 import 'examples/shader_mask_example.dart';
 import 'examples/sized_box_example.dart';
 import 'examples/slider_example.dart';
@@ -76,10 +94,12 @@ import 'examples/snack_bar_example.dart';
 import 'examples/spacer_example.dart';
 import 'examples/stack_example.dart';
 import 'examples/stream_builder_example.dart';
+import 'examples/switch_list_tile_example.dart';
 import 'examples/table_example.dart';
 import 'examples/tooltip_example.dart';
 import 'examples/transform_example.dart';
 import 'examples/tween_animation_builder_example.dart';
+import 'examples/url_launcher_example.dart';
 import 'examples/value_listenable_builder/value_listenable_builder_example.dart';
 import 'examples/wrap_example.dart';
 import 'examples/toggle_buttons_example.dart';
@@ -189,6 +209,25 @@ class HomePage extends StatelessWidget {
           _buildListItem(context, "CheckboxListTile", '''带选择框的 ListTitle''', const CheckboxListTileExample()),
           _buildListItem(context, "AboutDialog", '''关于 App 法律协议''', const AboutDialogExample()),
           _buildListItem(context, "Package:async", '''dart 异步包''', const PackageAsyncExample()),
+          _buildListItem(context, "url_launcher", '''打开其他 App''', const UrlLauncherExample()),
+          _buildListItem(context, "InteractiveViewer", '''让组件手动放大缩小''', const InteractiveViewerExample()),
+          _buildListItem(context, "GridView", '''网格布局''', const GridViewExample()),
+          _buildListItem(context, "SwitchListTile", '''开关、单选 ListTile''', const SwitchListTileExample()),
+          _buildListItem(context, "location", '''位置信息''', const LocationExample()),
+          _buildListItem(context, "device_info", '''设备信息''', const DeviceInfoExample()),
+          _buildListItem(context, "ImageFiltered", '''模糊效果，像素转换''', const ImageFilteredExample()),
+          _buildListItem(context, "PhysicalModel", '''阴影''', const PhysicalModelExample()),
+          _buildListItem(context, "Package:animations", '''动画库''', const PackageAnimationsExample()),
+          _buildListItem(context, "Package:flutter_slidable", '''右滑左滑选项''', const FlutterSlidableExample()),
+          _buildListItem(context, "RotatedBox", '''旋转''', const RotatedBoxExample()),
+          _buildListItem(context, "ExpansionPanel", '''右滑左滑选项''', const ExpansionPanelExample()),
+          _buildListItem(context, "Scrollbar", '''显示滚动条''', const ScrollbarExample()),
+          _buildListItem(context, "package:connectivity", '''网络状态''', const PackageConnectivityExample()),
+          _buildListItem(context, "FlutterLogo", '''Flutter Logo''', const FlutterLogoExample()),
+          _buildListItem(context, "animated_text_kit", '''文字动画''', const AnimatedTextKitExample()),
+          _buildListItem(context, "MouseRegion", '''鼠标''', const MouseRegionExample()),
+          _buildListItem(context, "Sensors_plus", '''陀螺仪和加速度传感器''', const SensorsPlusExample()),
+          _buildListItem(context, "package:collection", '''集合工具类''', const PackageCollectionExample()),
         ],
       ),
     );

@@ -17,6 +17,7 @@ class SliverAppBarExample extends StatelessWidget {
             ),
             floating: true,
             expandedHeight: 200,
+            onStretchTrigger: () async => print("onStretchTrigger"),
             title: const Text("SliverAppBar"),
           ),
           SliverList(

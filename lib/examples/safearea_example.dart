@@ -9,54 +9,57 @@ class SafeAreaExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.white,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      pagePop(context);
-                    },
-                    child: const Icon(
-                      CupertinoIcons.back,
-                      color: Colors.blue,
-                      size: 30,
+    return Container(
+      color: Colors.white,
+      child: SafeArea(
+        child: Container(
+          color: Colors.blue,
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        pagePop(context);
+                      },
+                      child: const Icon(
+                        CupertinoIcons.back,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
                     ),
-                  ),
-                  const Text(
-                    "SafeArea",
+                    const Text(
+                      "SafeArea",
+                      style: TextStyle(
+                          color: Colors.blue, decoration: TextDecoration.none),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        pagePop(context);
+                      },
+                      child: const Icon(
+                        CupertinoIcons.search,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Expanded(
+                child: Center(
+                  child: Text(
+                    "随意的布局",
                     style: TextStyle(
                         color: Colors.blue, decoration: TextDecoration.none),
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      pagePop(context);
-                    },
-                    child: const Icon(
-                      CupertinoIcons.search,
-                      color: Colors.blue,
-                      size: 30,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Expanded(
-              child: Center(
-                child: Text(
-                  "随意的布局",
-                  style: TextStyle(
-                      color: Colors.blue, decoration: TextDecoration.none),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
