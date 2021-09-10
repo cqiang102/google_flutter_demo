@@ -6,7 +6,6 @@ class PackageConnectivityExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO Unhandled Exception: MissingPluginException(No implementation found for method check on channel dev.fluttercommunity.plus/connectivity)
     return Container(
       color: Colors.white,
       child: Center(
@@ -29,5 +28,22 @@ class PackageConnectivityExample extends StatelessWidget {
     var _connectivityStatus = await _connectivity.checkConnectivity();
     print(_connectivity);
     print(_connectivityStatus);
+    if(ConnectivityResult.mobile == _connectivityStatus){
+      print("正在使用流量~~~");
+    }else if(ConnectivityResult.wifi == _connectivityStatus){
+      print("正在使用 Wifi ~~~");
+    }else if(ConnectivityResult.none == _connectivityStatus){
+      print("QAQ 网络不通畅");
+    }
+
+    _connectivity.onConnectivityChanged.listen((event) {
+      if(ConnectivityResult.mobile == event){
+        print("正在使用流量~~~");
+      }else if(ConnectivityResult.wifi == event){
+        print("正在使用 Wifi ~~~");
+      }else if(ConnectivityResult.none == event){
+        print("QAQ 网络不通畅");
+      }
+    });
   }
 }
